@@ -22,7 +22,7 @@ namespace GHelper
         public static System.Timers.Timer aTimer = default!;
         public static Point trayPoint;
 
-        public string versionUrl = "http://github.com/seerge/g-helper/releases";
+        public string versionUrl = "http://github.com/wqy224491/g-helper/releases";
 
         public string perfName = "Balanced";
 
@@ -54,8 +54,9 @@ namespace GHelper
             buttonXGM.BorderColor = colorTurbo;
 
             button60Hz.BorderColor = SystemColors.ActiveBorder;
-            button120Hz.BorderColor = SystemColors.ActiveBorder;
-            buttonScreenAuto.BorderColor = SystemColors.ActiveBorder;
+            button120Hz.BorderColor = colorStandard;
+            buttonScreenAuto.BorderColor = colorEco;
+            buttonOD.BorderColor = colorTurbo;
             buttonMiniled.BorderColor = colorTurbo;
 
             buttonOptimized.Click += ButtonOptimized_Click;
@@ -72,10 +73,10 @@ namespace GHelper
             button60Hz.Click += Button60Hz_Click;
             button120Hz.Click += Button120Hz_Click;
             buttonScreenAuto.Click += ButtonScreenAuto_Click;
+            buttonOD.Click += ButtonOD_Click;
             buttonMiniled.Click += ButtonMiniled_Click;
 
             buttonQuit.Click += ButtonQuit_Click;
-
             buttonKeyboardColor.Click += ButtonKeyboardColor_Click;
 
             buttonFans.Click += ButtonFans_Click;
@@ -127,6 +128,9 @@ namespace GHelper
 
             button120Hz.MouseMove += Button120Hz_MouseHover;
             button120Hz.MouseLeave += ButtonScreen_MouseLeave;
+
+            buttonOD.MouseMove += ButtonOD_MouseHover;
+            buttonOD.MouseLeave += ButtonScreen_MouseLeave;
 
             sliderBattery.ValueChanged += SliderBattery_ValueChanged;
             Program.trayIcon.MouseMove += TrayIcon_MouseMove;
@@ -319,7 +323,7 @@ namespace GHelper
                 using (var httpClient = new HttpClient())
                 {
                     httpClient.DefaultRequestHeaders.Add("User-Agent", "C# App");
-                    var json = await httpClient.GetStringAsync("https://api.github.com/repos/seerge/g-helper/releases/latest");
+                    var json = await httpClient.GetStringAsync("https://api.github.com/repos/wqy224491/g-helper/releases/latest");
                     var config = JsonSerializer.Deserialize<JsonElement>(json);
                     var tag = config.GetProperty("tag_name").ToString().Replace("v", "");
                     var url = config.GetProperty("assets")[0].GetProperty("browser_download_url").ToString();
@@ -426,6 +430,11 @@ namespace GHelper
         private void Button60Hz_MouseHover(object? sender, EventArgs e)
         {
             labelTipScreen.Text = Properties.Strings.MinRefreshTooltip;
+        }
+
+        private void ButtonOD_MouseHover(object? sender, EventArgs e)
+        {
+            labelTipScreen.Text = "Toggle on/off screen override to reduce display latency.";
         }
 
         private void ButtonScreen_MouseLeave(object? sender, EventArgs e)
@@ -767,14 +776,26 @@ namespace GHelper
         private void Button120Hz_Click(object? sender, EventArgs e)
         {
             AppConfig.setConfig("screen_auto", 0);
-            SetScreen(1000, 1);
+            SetScreen(1000);
         }
 
         private void Button60Hz_Click(object? sender, EventArgs e)
         {
             AppConfig.setConfig("screen_auto", 0);
-            SetScreen(60, 0);
+            SetScreen(60);
         }
+
+        public void ToogleOD()
+        {
+            int overdrive = (AppConfig.getConfig("overdrive") == 1) ? 0 : 1;
+            AppConfig.setConfig("overdrive", overdrive);
+            SetScreen(-1, overdrive);
+        }
+        private void ButtonOD_Click(object? sender, EventArgs e)
+        {
+            ToogleOD();
+        }
+
 
         public void ToogleMiniled()
         {
@@ -809,7 +830,11 @@ namespace GHelper
 
             if (overdrive >= 0)
             {
-                if (AppConfig.getConfig("no_overdrive") == 1) overdrive = 0;
+                int freq = NativeMethods.GetRefreshRate();
+                if (freq <= 60)
+                {
+                    overdrive = 0;
+                }
                 Program.acpi.DeviceSet(AsusACPI.ScreenOverdrive, overdrive, "ScreenOverdrive");
 
             }
@@ -839,6 +864,7 @@ namespace GHelper
 
             ButtonEnabled(button60Hz, screenEnabled);
             ButtonEnabled(button120Hz, screenEnabled);
+            ButtonEnabled(buttonOD, screenEnabled);
             ButtonEnabled(buttonScreenAuto, screenEnabled);
             ButtonEnabled(buttonMiniled, screenEnabled);
 
@@ -865,12 +891,12 @@ namespace GHelper
 
             if (maxFrequency > 60)
             {
-                button120Hz.Text = maxFrequency.ToString() + "Hz" + (overdriveSetting ? " + OD" : "");
-                panelScreen.Visible = true;
+                button120Hz.Text = maxFrequency.ToString() + "Hz";// + (overdriveSetting ? " + OD" : "");
+                panelScreen.Enabled = true;
             }
             else if (maxFrequency > 0)
             {
-                panelScreen.Visible = false;
+                panelScreen.Enabled = false;
             }
 
             if (miniled >= 0)
@@ -880,11 +906,22 @@ namespace GHelper
             }
             else
             {
-                buttonMiniled.Visible = false;
+                buttonMiniled.Enabled = false;
+            }
+
+            if (overdriveSetting == true && overdrive >= 0)
+            {
+                buttonOD.Enabled = true;
+                buttonOD.Activated = (overdrive == 1);
+                AppConfig.setConfig("overdrive", overdrive);
+            }
+            else
+            {
+                buttonOD.Enabled = false;
             }
 
             AppConfig.setConfig("frequency", frequency);
-            AppConfig.setConfig("overdrive", overdrive);
+            
         }
 
         private void ButtonQuit_Click(object? sender, EventArgs e)
@@ -1288,9 +1325,9 @@ namespace GHelper
             if (force || AppConfig.getConfig("screen_auto") == 1)
             {
                 if (SystemInformation.PowerStatus.PowerLineStatus == PowerLineStatus.Online)
-                    SetScreen(1000, 1);
+                    SetScreen(1000);
                 else
-                    SetScreen(60, 0);
+                    SetScreen(60);
             }
             else
             {
@@ -1387,7 +1424,7 @@ namespace GHelper
         public void InitXGM()
         {
 
-            buttonXGM.Enabled = buttonXGM.Visible = Program.acpi.IsXGConnected();
+            buttonXGM.Enabled = buttonXGM.Enabled = Program.acpi.IsXGConnected();
 
             int activated = Program.acpi.DeviceGet(AsusACPI.GPUXG);
             if (activated < 0) return;
@@ -1653,6 +1690,76 @@ namespace GHelper
         private void ButtonSilent_Click(object? sender, EventArgs e)
         {
             SetPerformanceMode(AsusACPI.PerformanceSilent);
+        }
+
+        private void buttonScreenAuto_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelMidFan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMiniled_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelTipGPU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureGPU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelGPU_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelGPUFan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableGPU_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelGPU_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelPerformance_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelGPU_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelGPU_Paint_2(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelTipGPU_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFans_Click_1(object sender, EventArgs e)
+        {
+
         }
 
         private void ButtonBalanced_Click(object? sender, EventArgs e)

@@ -31,1055 +31,1103 @@ namespace GHelper
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
-            panelMatrix = new Panel();
-            checkMatrix = new CheckBox();
-            tableLayoutMatrix = new TableLayoutPanel();
-            comboMatrix = new RComboBox();
-            comboMatrixRunning = new RComboBox();
-            buttonMatrix = new RButton();
-            pictureMatrix = new PictureBox();
-            labelMatrix = new Label();
-            panelBattery = new Panel();
-            sliderBattery = new WinFormsSliderBar.Slider();
-            labelModel = new Label();
-            labelVersion = new Label();
-            labelBattery = new Label();
-            pictureBattery = new PictureBox();
-            labelBatteryTitle = new Label();
-            panelFooter = new Panel();
-            buttonQuit = new RButton();
-            checkStartup = new CheckBox();
-            panelPerformance = new Panel();
-            picturePerf = new PictureBox();
-            labelPerf = new Label();
-            labelCPUFan = new Label();
-            tablePerf = new TableLayoutPanel();
-            buttonSilent = new RButton();
-            buttonBalanced = new RButton();
-            buttonTurbo = new RButton();
-            buttonFans = new RButton();
-            panelGPU = new Panel();
-            labelTipGPU = new Label();
-            pictureGPU = new PictureBox();
-            labelGPU = new Label();
-            labelGPUFan = new Label();
-            tableGPU = new TableLayoutPanel();
-            buttonEco = new RButton();
-            buttonStandard = new RButton();
-            buttonOptimized = new RButton();
-            buttonUltimate = new RButton();
-            buttonXGM = new RButton();
-            panelScreen = new Panel();
-            labelMidFan = new Label();
-            labelTipScreen = new Label();
-            tableScreen = new TableLayoutPanel();
-            buttonScreenAuto = new RButton();
-            button60Hz = new RButton();
-            button120Hz = new RButton();
-            buttonMiniled = new RButton();
-            pictureScreen = new PictureBox();
-            labelSreen = new Label();
-            panelKeyboard = new Panel();
-            tableLayoutKeyboard = new TableLayoutPanel();
-            comboKeyboard = new RComboBox();
-            panelColor = new Panel();
-            pictureColor2 = new PictureBox();
-            pictureColor = new PictureBox();
-            buttonKeyboardColor = new RButton();
-            buttonKeyboard = new RButton();
-            pictureKeyboard = new PictureBox();
-            labelKeyboard = new Label();
-            panelMatrix.SuspendLayout();
-            tableLayoutMatrix.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureMatrix).BeginInit();
-            panelBattery.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBattery).BeginInit();
-            panelFooter.SuspendLayout();
-            panelPerformance.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)picturePerf).BeginInit();
-            tablePerf.SuspendLayout();
-            panelGPU.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureGPU).BeginInit();
-            tableGPU.SuspendLayout();
-            panelScreen.SuspendLayout();
-            tableScreen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureScreen).BeginInit();
-            panelKeyboard.SuspendLayout();
-            tableLayoutKeyboard.SuspendLayout();
-            panelColor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureColor2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureColor).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureKeyboard).BeginInit();
-            SuspendLayout();
+            this.panelMatrix = new System.Windows.Forms.Panel();
+            this.checkMatrix = new System.Windows.Forms.CheckBox();
+            this.tableLayoutMatrix = new System.Windows.Forms.TableLayoutPanel();
+            this.comboMatrix = new CustomControls.RComboBox();
+            this.comboMatrixRunning = new CustomControls.RComboBox();
+            this.buttonMatrix = new CustomControls.RButton();
+            this.pictureMatrix = new System.Windows.Forms.PictureBox();
+            this.labelMatrix = new System.Windows.Forms.Label();
+            this.panelBattery = new System.Windows.Forms.Panel();
+            this.sliderBattery = new WinFormsSliderBar.Slider();
+            this.labelModel = new System.Windows.Forms.Label();
+            this.labelVersion = new System.Windows.Forms.Label();
+            this.labelBattery = new System.Windows.Forms.Label();
+            this.pictureBattery = new System.Windows.Forms.PictureBox();
+            this.labelBatteryTitle = new System.Windows.Forms.Label();
+            this.panelFooter = new System.Windows.Forms.Panel();
+            this.buttonQuit = new CustomControls.RButton();
+            this.checkStartup = new System.Windows.Forms.CheckBox();
+            this.panelPerformance = new System.Windows.Forms.Panel();
+            this.picturePerf = new System.Windows.Forms.PictureBox();
+            this.labelPerf = new System.Windows.Forms.Label();
+            this.labelCPUFan = new System.Windows.Forms.Label();
+            this.tablePerf = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSilent = new CustomControls.RButton();
+            this.buttonBalanced = new CustomControls.RButton();
+            this.buttonTurbo = new CustomControls.RButton();
+            this.buttonFans = new CustomControls.RButton();
+            this.panelGPU = new System.Windows.Forms.Panel();
+            this.pictureGPU = new System.Windows.Forms.PictureBox();
+            this.labelGPU = new System.Windows.Forms.Label();
+            this.labelGPUFan = new System.Windows.Forms.Label();
+            this.tableGPU = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonXGM = new CustomControls.RButton();
+            this.buttonEco = new CustomControls.RButton();
+            this.buttonStandard = new CustomControls.RButton();
+            this.buttonOptimized = new CustomControls.RButton();
+            this.buttonUltimate = new CustomControls.RButton();
+            this.labelTipGPU = new System.Windows.Forms.Label();
+            this.panelScreen = new System.Windows.Forms.Panel();
+            this.labelMidFan = new System.Windows.Forms.Label();
+            this.labelTipScreen = new System.Windows.Forms.Label();
+            this.tableScreen = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonScreenAuto = new CustomControls.RButton();
+            this.button60Hz = new CustomControls.RButton();
+            this.button120Hz = new CustomControls.RButton();
+            this.buttonOD = new CustomControls.RButton();
+            this.buttonMiniled = new CustomControls.RButton();
+            this.pictureScreen = new System.Windows.Forms.PictureBox();
+            this.labelSreen = new System.Windows.Forms.Label();
+            this.panelKeyboard = new System.Windows.Forms.Panel();
+            this.tableLayoutKeyboard = new System.Windows.Forms.TableLayoutPanel();
+            this.comboKeyboard = new CustomControls.RComboBox();
+            this.panelColor = new System.Windows.Forms.Panel();
+            this.pictureColor2 = new System.Windows.Forms.PictureBox();
+            this.pictureColor = new System.Windows.Forms.PictureBox();
+            this.buttonKeyboardColor = new CustomControls.RButton();
+            this.buttonKeyboard = new CustomControls.RButton();
+            this.pictureKeyboard = new System.Windows.Forms.PictureBox();
+            this.labelKeyboard = new System.Windows.Forms.Label();
+            this.panelMatrix.SuspendLayout();
+            this.tableLayoutMatrix.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMatrix)).BeginInit();
+            this.panelBattery.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBattery)).BeginInit();
+            this.panelFooter.SuspendLayout();
+            this.panelPerformance.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePerf)).BeginInit();
+            this.tablePerf.SuspendLayout();
+            this.panelGPU.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureGPU)).BeginInit();
+            this.tableGPU.SuspendLayout();
+            this.panelScreen.SuspendLayout();
+            this.tableScreen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureScreen)).BeginInit();
+            this.panelKeyboard.SuspendLayout();
+            this.tableLayoutKeyboard.SuspendLayout();
+            this.panelColor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKeyboard)).BeginInit();
+            this.SuspendLayout();
             // 
             // panelMatrix
             // 
-            panelMatrix.AutoSize = true;
-            panelMatrix.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelMatrix.Controls.Add(checkMatrix);
-            panelMatrix.Controls.Add(tableLayoutMatrix);
-            panelMatrix.Controls.Add(pictureMatrix);
-            panelMatrix.Controls.Add(labelMatrix);
-            panelMatrix.Dock = DockStyle.Top;
-            panelMatrix.Location = new Point(10, 758);
-            panelMatrix.Margin = new Padding(8);
-            panelMatrix.Name = "panelMatrix";
-            panelMatrix.Padding = new Padding(0, 0, 0, 12);
-            panelMatrix.Size = new Size(810, 168);
-            panelMatrix.TabIndex = 33;
+            this.panelMatrix.AutoSize = true;
+            this.panelMatrix.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelMatrix.Controls.Add(this.checkMatrix);
+            this.panelMatrix.Controls.Add(this.tableLayoutMatrix);
+            this.panelMatrix.Controls.Add(this.pictureMatrix);
+            this.panelMatrix.Controls.Add(this.labelMatrix);
+            this.panelMatrix.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMatrix.Location = new System.Drawing.Point(6, 476);
+            this.panelMatrix.Margin = new System.Windows.Forms.Padding(5);
+            this.panelMatrix.Name = "panelMatrix";
+            this.panelMatrix.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelMatrix.Size = new System.Drawing.Size(496, 108);
+            this.panelMatrix.TabIndex = 33;
             // 
             // checkMatrix
             // 
-            checkMatrix.AutoSize = true;
-            checkMatrix.ForeColor = SystemColors.GrayText;
-            checkMatrix.Location = new Point(24, 116);
-            checkMatrix.Margin = new Padding(8, 4, 8, 4);
-            checkMatrix.Name = "checkMatrix";
-            checkMatrix.Size = new Size(249, 36);
-            checkMatrix.TabIndex = 44;
-            checkMatrix.Text = Properties.Strings.TurnOffOnBattery;
-            checkMatrix.UseVisualStyleBackColor = true;
+            this.checkMatrix.AutoSize = true;
+            this.checkMatrix.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.checkMatrix.Location = new System.Drawing.Point(15, 76);
+            this.checkMatrix.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.checkMatrix.Name = "checkMatrix";
+            this.checkMatrix.Size = new System.Drawing.Size(155, 24);
+            this.checkMatrix.TabIndex = 44;
+            this.checkMatrix.Text = global::GHelper.Properties.Strings.TurnOffOnBattery;
+            this.checkMatrix.UseVisualStyleBackColor = true;
             // 
             // tableLayoutMatrix
             // 
-            tableLayoutMatrix.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutMatrix.AutoSize = true;
-            tableLayoutMatrix.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutMatrix.ColumnCount = 3;
-            tableLayoutMatrix.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutMatrix.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutMatrix.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutMatrix.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutMatrix.Controls.Add(comboMatrix, 0, 0);
-            tableLayoutMatrix.Controls.Add(comboMatrixRunning, 1, 0);
-            tableLayoutMatrix.Controls.Add(buttonMatrix, 2, 0);
-            tableLayoutMatrix.Location = new Point(16, 52);
-            tableLayoutMatrix.Margin = new Padding(8);
-            tableLayoutMatrix.Name = "tableLayoutMatrix";
-            tableLayoutMatrix.RowCount = 1;
-            tableLayoutMatrix.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutMatrix.Size = new Size(771, 60);
-            tableLayoutMatrix.TabIndex = 43;
+            this.tableLayoutMatrix.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutMatrix.AutoSize = true;
+            this.tableLayoutMatrix.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutMatrix.ColumnCount = 3;
+            this.tableLayoutMatrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutMatrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutMatrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutMatrix.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutMatrix.Controls.Add(this.comboMatrix, 0, 0);
+            this.tableLayoutMatrix.Controls.Add(this.comboMatrixRunning, 1, 0);
+            this.tableLayoutMatrix.Controls.Add(this.buttonMatrix, 2, 0);
+            this.tableLayoutMatrix.Location = new System.Drawing.Point(10, 35);
+            this.tableLayoutMatrix.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutMatrix.Name = "tableLayoutMatrix";
+            this.tableLayoutMatrix.RowCount = 1;
+            this.tableLayoutMatrix.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutMatrix.Size = new System.Drawing.Size(465, 39);
+            this.tableLayoutMatrix.TabIndex = 43;
             // 
             // comboMatrix
             // 
-            comboMatrix.BorderColor = Color.White;
-            comboMatrix.ButtonColor = Color.FromArgb(255, 255, 255);
-            comboMatrix.Dock = DockStyle.Top;
-            comboMatrix.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboMatrix.FormattingEnabled = true;
-            comboMatrix.ItemHeight = 32;
-            comboMatrix.Items.AddRange(new object[] { Properties.Strings.MatrixOff, Properties.Strings.MatrixDim, Properties.Strings.MatrixMedium, Properties.Strings.MatrixBright });
-            comboMatrix.Location = new Point(4, 10);
-            comboMatrix.Margin = new Padding(4, 10, 4, 8);
-            comboMatrix.Name = "comboMatrix";
-            comboMatrix.Size = new Size(249, 40);
-            comboMatrix.TabIndex = 41;
-            comboMatrix.TabStop = false;
+            this.comboMatrix.BorderColor = System.Drawing.Color.White;
+            this.comboMatrix.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboMatrix.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboMatrix.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboMatrix.FormattingEnabled = true;
+            this.comboMatrix.ItemHeight = 20;
+            this.comboMatrix.Items.AddRange(new object[] {
+            global::GHelper.Properties.Strings.MatrixOff,
+            global::GHelper.Properties.Strings.MatrixDim,
+            global::GHelper.Properties.Strings.MatrixMedium,
+            global::GHelper.Properties.Strings.MatrixBright});
+            this.comboMatrix.Location = new System.Drawing.Point(2, 6);
+            this.comboMatrix.Margin = new System.Windows.Forms.Padding(2, 6, 2, 5);
+            this.comboMatrix.Name = "comboMatrix";
+            this.comboMatrix.Size = new System.Drawing.Size(151, 28);
+            this.comboMatrix.TabIndex = 41;
+            this.comboMatrix.TabStop = false;
             // 
             // comboMatrixRunning
             // 
-            comboMatrixRunning.BorderColor = Color.White;
-            comboMatrixRunning.ButtonColor = Color.FromArgb(255, 255, 255);
-            comboMatrixRunning.Dock = DockStyle.Top;
-            comboMatrixRunning.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboMatrixRunning.FormattingEnabled = true;
-            comboMatrixRunning.ItemHeight = 32;
-            comboMatrixRunning.Items.AddRange(new object[] { Properties.Strings.MatrixBanner, Properties.Strings.MatrixLogo, Properties.Strings.MatrixPicture, Properties.Strings.MatrixClock, Properties.Strings.MatrixAudio });
-            comboMatrixRunning.Location = new Point(261, 10);
-            comboMatrixRunning.Margin = new Padding(4, 10, 4, 8);
-            comboMatrixRunning.Name = "comboMatrixRunning";
-            comboMatrixRunning.Size = new Size(249, 40);
-            comboMatrixRunning.TabIndex = 42;
-            comboMatrixRunning.TabStop = false;
+            this.comboMatrixRunning.BorderColor = System.Drawing.Color.White;
+            this.comboMatrixRunning.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboMatrixRunning.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboMatrixRunning.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboMatrixRunning.FormattingEnabled = true;
+            this.comboMatrixRunning.ItemHeight = 20;
+            this.comboMatrixRunning.Items.AddRange(new object[] {
+            global::GHelper.Properties.Strings.MatrixBanner,
+            global::GHelper.Properties.Strings.MatrixLogo,
+            global::GHelper.Properties.Strings.MatrixPicture,
+            global::GHelper.Properties.Strings.MatrixClock,
+            global::GHelper.Properties.Strings.MatrixAudio});
+            this.comboMatrixRunning.Location = new System.Drawing.Point(157, 6);
+            this.comboMatrixRunning.Margin = new System.Windows.Forms.Padding(2, 6, 2, 5);
+            this.comboMatrixRunning.Name = "comboMatrixRunning";
+            this.comboMatrixRunning.Size = new System.Drawing.Size(151, 28);
+            this.comboMatrixRunning.TabIndex = 42;
+            this.comboMatrixRunning.TabStop = false;
             // 
             // buttonMatrix
             // 
-            buttonMatrix.Activated = false;
-            buttonMatrix.BackColor = SystemColors.ControlLight;
-            buttonMatrix.BorderColor = Color.Transparent;
-            buttonMatrix.BorderRadius = 2;
-            buttonMatrix.Dock = DockStyle.Top;
-            buttonMatrix.FlatAppearance.BorderSize = 0;
-            buttonMatrix.FlatStyle = FlatStyle.Flat;
-            buttonMatrix.Location = new Point(518, 8);
-            buttonMatrix.Margin = new Padding(4, 7, 4, 7);
-            buttonMatrix.Name = "buttonMatrix";
-            buttonMatrix.Secondary = true;
-            buttonMatrix.Size = new Size(249, 45);
-            buttonMatrix.TabIndex = 43;
-            buttonMatrix.Text = Properties.Strings.PictureGif;
-            buttonMatrix.UseVisualStyleBackColor = false;
+            this.buttonMatrix.Activated = false;
+            this.buttonMatrix.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonMatrix.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonMatrix.BorderRadius = 2;
+            this.buttonMatrix.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonMatrix.FlatAppearance.BorderSize = 0;
+            this.buttonMatrix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMatrix.Location = new System.Drawing.Point(312, 4);
+            this.buttonMatrix.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonMatrix.Name = "buttonMatrix";
+            this.buttonMatrix.Secondary = true;
+            this.buttonMatrix.Size = new System.Drawing.Size(151, 28);
+            this.buttonMatrix.TabIndex = 43;
+            this.buttonMatrix.Text = global::GHelper.Properties.Strings.PictureGif;
+            this.buttonMatrix.UseVisualStyleBackColor = false;
             // 
             // pictureMatrix
             // 
-            pictureMatrix.BackgroundImage = Properties.Resources.icons8_matrix_desktop_48;
-            pictureMatrix.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureMatrix.Location = new Point(24, 15);
-            pictureMatrix.Margin = new Padding(4);
-            pictureMatrix.Name = "pictureMatrix";
-            pictureMatrix.Size = new Size(32, 32);
-            pictureMatrix.TabIndex = 39;
-            pictureMatrix.TabStop = false;
+            this.pictureMatrix.BackgroundImage = global::GHelper.Properties.Resources.icons8_matrix_desktop_48;
+            this.pictureMatrix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureMatrix.Location = new System.Drawing.Point(15, 10);
+            this.pictureMatrix.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureMatrix.Name = "pictureMatrix";
+            this.pictureMatrix.Size = new System.Drawing.Size(20, 20);
+            this.pictureMatrix.TabIndex = 39;
+            this.pictureMatrix.TabStop = false;
             // 
             // labelMatrix
             // 
-            labelMatrix.AutoSize = true;
-            labelMatrix.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelMatrix.Location = new Point(60, 14);
-            labelMatrix.Margin = new Padding(8, 0, 8, 0);
-            labelMatrix.Name = "labelMatrix";
-            labelMatrix.Size = new Size(170, 32);
-            labelMatrix.TabIndex = 38;
-            labelMatrix.Text = Properties.Strings.AnimeMatrix;
+            this.labelMatrix.AutoSize = true;
+            this.labelMatrix.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelMatrix.Location = new System.Drawing.Point(38, 9);
+            this.labelMatrix.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelMatrix.Name = "labelMatrix";
+            this.labelMatrix.Size = new System.Drawing.Size(105, 20);
+            this.labelMatrix.TabIndex = 38;
+            this.labelMatrix.Text = "Anime Matrix";
             // 
             // panelBattery
             // 
-            panelBattery.AutoSize = true;
-            panelBattery.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelBattery.Controls.Add(sliderBattery);
-            panelBattery.Controls.Add(labelModel);
-            panelBattery.Controls.Add(labelVersion);
-            panelBattery.Controls.Add(labelBattery);
-            panelBattery.Controls.Add(pictureBattery);
-            panelBattery.Controls.Add(labelBatteryTitle);
-            panelBattery.Dock = DockStyle.Top;
-            panelBattery.Location = new Point(10, 926);
-            panelBattery.Margin = new Padding(8);
-            panelBattery.Name = "panelBattery";
-            panelBattery.Padding = new Padding(0, 0, 0, 12);
-            panelBattery.Size = new Size(810, 163);
-            panelBattery.TabIndex = 34;
+            this.panelBattery.AutoSize = true;
+            this.panelBattery.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelBattery.Controls.Add(this.sliderBattery);
+            this.panelBattery.Controls.Add(this.labelModel);
+            this.panelBattery.Controls.Add(this.labelVersion);
+            this.panelBattery.Controls.Add(this.labelBattery);
+            this.panelBattery.Controls.Add(this.pictureBattery);
+            this.panelBattery.Controls.Add(this.labelBatteryTitle);
+            this.panelBattery.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBattery.Location = new System.Drawing.Point(6, 584);
+            this.panelBattery.Margin = new System.Windows.Forms.Padding(5);
+            this.panelBattery.Name = "panelBattery";
+            this.panelBattery.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelBattery.Size = new System.Drawing.Size(496, 96);
+            this.panelBattery.TabIndex = 34;
             // 
             // sliderBattery
             // 
-            sliderBattery.Location = new Point(16, 70);
-            sliderBattery.Max = 100;
-            sliderBattery.Min = 50;
-            sliderBattery.Name = "sliderBattery";
-            sliderBattery.Size = new Size(772, 40);
-            sliderBattery.TabIndex = 39;
-            sliderBattery.Text = "sliderBattery";
-            sliderBattery.Value = 80;
+            this.sliderBattery.Location = new System.Drawing.Point(10, 35);
+            this.sliderBattery.Margin = new System.Windows.Forms.Padding(2);
+            this.sliderBattery.Max = 100;
+            this.sliderBattery.Min = 50;
+            this.sliderBattery.Name = "sliderBattery";
+            this.sliderBattery.Size = new System.Drawing.Size(471, 25);
+            this.sliderBattery.TabIndex = 39;
+            this.sliderBattery.Text = "sliderBattery";
+            this.sliderBattery.Value = 80;
             // 
             // labelModel
             // 
-            labelModel.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            labelModel.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            labelModel.ForeColor = SystemColors.ControlDark;
-            labelModel.Location = new Point(380, 119);
-            labelModel.Margin = new Padding(8, 0, 8, 0);
-            labelModel.Name = "labelModel";
-            labelModel.Size = new Size(400, 32);
-            labelModel.TabIndex = 38;
-            labelModel.TextAlign = ContentAlignment.TopRight;
+            this.labelModel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelModel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelModel.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.labelModel.Location = new System.Drawing.Point(227, 70);
+            this.labelModel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelModel.Name = "labelModel";
+            this.labelModel.Size = new System.Drawing.Size(250, 20);
+            this.labelModel.TabIndex = 38;
+            this.labelModel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelVersion
             // 
-            labelVersion.AutoSize = false;
-            labelVersion.Font = new Font("Segoe UI", 9F, FontStyle.Underline, GraphicsUnit.Point);
-            labelVersion.ForeColor = SystemColors.ControlDark;
-            labelVersion.Location = new Point(25, 119);
-            labelVersion.Margin = new Padding(8, 0, 8, 0);
-            labelVersion.Name = "labelVersion";
-            labelVersion.Size = new Size(300, 32);
-            labelVersion.TabIndex = 37;
-            labelVersion.Text = "v.0";
-            labelVersion.Cursor = Cursors.Hand;
+            this.labelVersion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelVersion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.labelVersion.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.labelVersion.Location = new System.Drawing.Point(16, 70);
+            this.labelVersion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(188, 20);
+            this.labelVersion.TabIndex = 37;
+            this.labelVersion.Text = "v.0";
             // 
             // labelBattery
             // 
-            labelBattery.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            labelBattery.Location = new Point(422, 9);
-            labelBattery.Margin = new Padding(8, 0, 8, 0);
-            labelBattery.Name = "labelBattery";
-            labelBattery.Size = new Size(364, 44);
-            labelBattery.TabIndex = 36;
-            labelBattery.Text = "                ";
-            labelBattery.TextAlign = ContentAlignment.TopRight;
+            this.labelBattery.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelBattery.Location = new System.Drawing.Point(253, 6);
+            this.labelBattery.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelBattery.Name = "labelBattery";
+            this.labelBattery.Size = new System.Drawing.Size(228, 28);
+            this.labelBattery.TabIndex = 36;
+            this.labelBattery.Text = "                ";
+            this.labelBattery.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pictureBattery
             // 
-            pictureBattery.BackgroundImage = (Image)resources.GetObject("pictureBattery.BackgroundImage");
-            pictureBattery.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBattery.Location = new Point(24, 16);
-            pictureBattery.Margin = new Padding(4);
-            pictureBattery.Name = "pictureBattery";
-            pictureBattery.Size = new Size(32, 32);
-            pictureBattery.TabIndex = 35;
-            pictureBattery.TabStop = false;
+            this.pictureBattery.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBattery.BackgroundImage")));
+            this.pictureBattery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBattery.Location = new System.Drawing.Point(15, 10);
+            this.pictureBattery.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBattery.Name = "pictureBattery";
+            this.pictureBattery.Size = new System.Drawing.Size(20, 20);
+            this.pictureBattery.TabIndex = 35;
+            this.pictureBattery.TabStop = false;
             // 
             // labelBatteryTitle
             // 
-            labelBatteryTitle.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelBatteryTitle.Location = new Point(60, 15);
-            labelBatteryTitle.Margin = new Padding(8, 0, 8, 0);
-            labelBatteryTitle.Name = "labelBatteryTitle";
-            labelBatteryTitle.Size = new Size(393, 36);
-            labelBatteryTitle.TabIndex = 34;
-            labelBatteryTitle.Text = Properties.Strings.BatteryChargeLimit;
+            this.labelBatteryTitle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelBatteryTitle.Location = new System.Drawing.Point(38, 9);
+            this.labelBatteryTitle.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelBatteryTitle.Name = "labelBatteryTitle";
+            this.labelBatteryTitle.Size = new System.Drawing.Size(246, 22);
+            this.labelBatteryTitle.TabIndex = 34;
+            this.labelBatteryTitle.Text = "Battery Charge Limit";
             // 
             // panelFooter
             // 
-            panelFooter.AutoSize = true;
-            panelFooter.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelFooter.Controls.Add(buttonQuit);
-            panelFooter.Controls.Add(checkStartup);
-            panelFooter.Dock = DockStyle.Top;
-            panelFooter.Location = new Point(10, 1089);
-            panelFooter.Margin = new Padding(8);
-            panelFooter.Name = "panelFooter";
-            panelFooter.Padding = new Padding(0, 0, 0, 10);
-            panelFooter.Size = new Size(810, 74);
-            panelFooter.TabIndex = 35;
+            this.panelFooter.AutoSize = true;
+            this.panelFooter.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelFooter.Controls.Add(this.buttonQuit);
+            this.panelFooter.Controls.Add(this.checkStartup);
+            this.panelFooter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFooter.Location = new System.Drawing.Point(6, 680);
+            this.panelFooter.Margin = new System.Windows.Forms.Padding(5);
+            this.panelFooter.Name = "panelFooter";
+            this.panelFooter.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelFooter.Size = new System.Drawing.Size(496, 46);
+            this.panelFooter.TabIndex = 35;
             // 
             // buttonQuit
             // 
-            buttonQuit.Activated = false;
-            buttonQuit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            buttonQuit.BackColor = SystemColors.ControlLight;
-            buttonQuit.BorderColor = Color.Transparent;
-            buttonQuit.BorderRadius = 2;
-            buttonQuit.FlatStyle = FlatStyle.Flat;
-            buttonQuit.Location = new Point(599, 16);
-            buttonQuit.Margin = new Padding(8, 4, 8, 4);
-            buttonQuit.Name = "buttonQuit";
-            buttonQuit.Secondary = true;
-            buttonQuit.Size = new Size(185, 44);
-            buttonQuit.TabIndex = 18;
-            buttonQuit.Text = Properties.Strings.Quit;
-            buttonQuit.UseVisualStyleBackColor = false;
+            this.buttonQuit.Activated = false;
+            this.buttonQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonQuit.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonQuit.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonQuit.BorderRadius = 2;
+            this.buttonQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuit.Location = new System.Drawing.Point(363, 10);
+            this.buttonQuit.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Secondary = true;
+            this.buttonQuit.Size = new System.Drawing.Size(116, 28);
+            this.buttonQuit.TabIndex = 18;
+            this.buttonQuit.Text = global::GHelper.Properties.Strings.Quit;
+            this.buttonQuit.UseVisualStyleBackColor = false;
             // 
             // checkStartup
             // 
-            checkStartup.AutoSize = true;
-            checkStartup.Location = new Point(24, 21);
-            checkStartup.Margin = new Padding(8, 4, 8, 4);
-            checkStartup.Name = "checkStartup";
-            checkStartup.Size = new Size(206, 36);
-            checkStartup.TabIndex = 17;
-            checkStartup.Text = Properties.Strings.RunOnStartup;
-            checkStartup.UseVisualStyleBackColor = true;
+            this.checkStartup.AutoSize = true;
+            this.checkStartup.Location = new System.Drawing.Point(15, 13);
+            this.checkStartup.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.checkStartup.Name = "checkStartup";
+            this.checkStartup.Size = new System.Drawing.Size(129, 24);
+            this.checkStartup.TabIndex = 17;
+            this.checkStartup.Text = global::GHelper.Properties.Strings.RunOnStartup;
+            this.checkStartup.UseVisualStyleBackColor = true;
             // 
             // panelPerformance
             // 
-            panelPerformance.AutoSize = true;
-            panelPerformance.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelPerformance.Controls.Add(picturePerf);
-            panelPerformance.Controls.Add(labelPerf);
-            panelPerformance.Controls.Add(labelCPUFan);
-            panelPerformance.Controls.Add(tablePerf);
-            panelPerformance.Dock = DockStyle.Top;
-            panelPerformance.Location = new Point(10, 10);
-            panelPerformance.Margin = new Padding(0);
-            panelPerformance.Name = "panelPerformance";
-            panelPerformance.Padding = new Padding(0, 0, 0, 12);
-            panelPerformance.Size = new Size(810, 200);
-            panelPerformance.TabIndex = 36;
+            this.panelPerformance.AutoSize = true;
+            this.panelPerformance.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelPerformance.Controls.Add(this.picturePerf);
+            this.panelPerformance.Controls.Add(this.labelPerf);
+            this.panelPerformance.Controls.Add(this.labelCPUFan);
+            this.panelPerformance.Controls.Add(this.tablePerf);
+            this.panelPerformance.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPerformance.Location = new System.Drawing.Point(6, 6);
+            this.panelPerformance.Margin = new System.Windows.Forms.Padding(0);
+            this.panelPerformance.Name = "panelPerformance";
+            this.panelPerformance.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelPerformance.Size = new System.Drawing.Size(496, 123);
+            this.panelPerformance.TabIndex = 36;
+            this.panelPerformance.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPerformance_Paint);
             // 
             // picturePerf
             // 
-            picturePerf.BackgroundImage = (Image)resources.GetObject("picturePerf.BackgroundImage");
-            picturePerf.BackgroundImageLayout = ImageLayout.Zoom;
-            picturePerf.InitialImage = null;
-            picturePerf.Location = new Point(24, 18);
-            picturePerf.Margin = new Padding(4);
-            picturePerf.Name = "picturePerf";
-            picturePerf.Size = new Size(32, 32);
-            picturePerf.TabIndex = 32;
-            picturePerf.TabStop = false;
+            this.picturePerf.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picturePerf.BackgroundImage")));
+            this.picturePerf.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picturePerf.InitialImage = null;
+            this.picturePerf.Location = new System.Drawing.Point(15, 10);
+            this.picturePerf.Margin = new System.Windows.Forms.Padding(2);
+            this.picturePerf.Name = "picturePerf";
+            this.picturePerf.Size = new System.Drawing.Size(20, 20);
+            this.picturePerf.TabIndex = 32;
+            this.picturePerf.TabStop = false;
             // 
             // labelPerf
             // 
-            labelPerf.AutoSize = true;
-            labelPerf.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelPerf.Location = new Point(60, 18);
-            labelPerf.Margin = new Padding(8, 0, 8, 0);
-            labelPerf.Name = "labelPerf";
-            labelPerf.Size = new Size(234, 32);
-            labelPerf.TabIndex = 31;
-            labelPerf.Text = Properties.Strings.PerformanceMode;
+            this.labelPerf.AutoSize = true;
+            this.labelPerf.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelPerf.Location = new System.Drawing.Point(38, 9);
+            this.labelPerf.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelPerf.Name = "labelPerf";
+            this.labelPerf.Size = new System.Drawing.Size(143, 20);
+            this.labelPerf.TabIndex = 31;
+            this.labelPerf.Text = "Performance Mode";
             // 
             // labelCPUFan
             // 
-            labelCPUFan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            labelCPUFan.Cursor = Cursors.Hand;
-            labelCPUFan.Location = new Point(384, 18);
-            labelCPUFan.Margin = new Padding(8, 0, 8, 0);
-            labelCPUFan.Name = "labelCPUFan";
-            labelCPUFan.Size = new Size(400, 36);
-            labelCPUFan.TabIndex = 30;
-            labelCPUFan.Text = "      ";
-            labelCPUFan.TextAlign = ContentAlignment.TopRight;
+            this.labelCPUFan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCPUFan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelCPUFan.Location = new System.Drawing.Point(229, 6);
+            this.labelCPUFan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelCPUFan.Name = "labelCPUFan";
+            this.labelCPUFan.Size = new System.Drawing.Size(250, 22);
+            this.labelCPUFan.TabIndex = 30;
+            this.labelCPUFan.Text = "      ";
+            this.labelCPUFan.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // tablePerf
             // 
-            tablePerf.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tablePerf.AutoSize = true;
-            tablePerf.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tablePerf.ColumnCount = 4;
-            tablePerf.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tablePerf.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tablePerf.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tablePerf.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tablePerf.Controls.Add(buttonSilent, 0, 0);
-            tablePerf.Controls.Add(buttonBalanced, 1, 0);
-            tablePerf.Controls.Add(buttonTurbo, 2, 0);
-            tablePerf.Controls.Add(buttonFans, 3, 0);
-            tablePerf.Location = new Point(16, 56);
-            tablePerf.Margin = new Padding(8, 4, 8, 4);
-            tablePerf.Name = "tablePerf";
-            tablePerf.RowCount = 1;
-            tablePerf.RowStyles.Add(new RowStyle(SizeType.Absolute, 128F));
-            tablePerf.Size = new Size(772, 128);
-            tablePerf.TabIndex = 29;
+            this.tablePerf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tablePerf.AutoSize = true;
+            this.tablePerf.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tablePerf.ColumnCount = 4;
+            this.tablePerf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tablePerf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tablePerf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tablePerf.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tablePerf.Controls.Add(this.buttonSilent, 0, 0);
+            this.tablePerf.Controls.Add(this.buttonBalanced, 1, 0);
+            this.tablePerf.Controls.Add(this.buttonTurbo, 2, 0);
+            this.tablePerf.Controls.Add(this.buttonFans, 3, 0);
+            this.tablePerf.Location = new System.Drawing.Point(10, 35);
+            this.tablePerf.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.tablePerf.Name = "tablePerf";
+            this.tablePerf.RowCount = 1;
+            this.tablePerf.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tablePerf.Size = new System.Drawing.Size(472, 80);
+            this.tablePerf.TabIndex = 29;
             // 
             // buttonSilent
             // 
-            buttonSilent.Activated = false;
-            buttonSilent.BackColor = SystemColors.ControlLightLight;
-            buttonSilent.BackgroundImageLayout = ImageLayout.None;
-            buttonSilent.BorderColor = Color.Transparent;
-            buttonSilent.BorderRadius = 5;
-            buttonSilent.CausesValidation = false;
-            buttonSilent.Dock = DockStyle.Fill;
-            buttonSilent.FlatAppearance.BorderSize = 0;
-            buttonSilent.FlatStyle = FlatStyle.Flat;
-            buttonSilent.ForeColor = SystemColors.ControlText;
-            buttonSilent.Image = Properties.Resources.icons8_bicycle_48__1_;
-            buttonSilent.ImageAlign = ContentAlignment.BottomCenter;
-            buttonSilent.Location = new Point(4, 4);
-            buttonSilent.Margin = new Padding(4);
-            buttonSilent.Name = "buttonSilent";
-            buttonSilent.Secondary = false;
-            buttonSilent.Size = new Size(185, 120);
-            buttonSilent.TabIndex = 0;
-            buttonSilent.Text = Properties.Strings.Silent;
-            buttonSilent.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonSilent.UseVisualStyleBackColor = false;
+            this.buttonSilent.Activated = false;
+            this.buttonSilent.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonSilent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonSilent.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonSilent.BorderRadius = 5;
+            this.buttonSilent.CausesValidation = false;
+            this.buttonSilent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSilent.FlatAppearance.BorderSize = 0;
+            this.buttonSilent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSilent.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonSilent.Image = global::GHelper.Properties.Resources.icons8_bicycle_48__1_;
+            this.buttonSilent.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonSilent.Location = new System.Drawing.Point(2, 2);
+            this.buttonSilent.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSilent.Name = "buttonSilent";
+            this.buttonSilent.Secondary = false;
+            this.buttonSilent.Size = new System.Drawing.Size(114, 76);
+            this.buttonSilent.TabIndex = 0;
+            this.buttonSilent.Text = global::GHelper.Properties.Strings.Silent;
+            this.buttonSilent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonSilent.UseVisualStyleBackColor = false;
             // 
             // buttonBalanced
             // 
-            buttonBalanced.Activated = false;
-            buttonBalanced.BackColor = SystemColors.ControlLightLight;
-            buttonBalanced.BorderColor = Color.Transparent;
-            buttonBalanced.BorderRadius = 5;
-            buttonBalanced.Dock = DockStyle.Fill;
-            buttonBalanced.FlatAppearance.BorderSize = 0;
-            buttonBalanced.FlatStyle = FlatStyle.Flat;
-            buttonBalanced.ForeColor = SystemColors.ControlText;
-            buttonBalanced.Image = Properties.Resources.icons8_fiat_500_48;
-            buttonBalanced.ImageAlign = ContentAlignment.BottomCenter;
-            buttonBalanced.Location = new Point(197, 4);
-            buttonBalanced.Margin = new Padding(4);
-            buttonBalanced.Name = "buttonBalanced";
-            buttonBalanced.Secondary = false;
-            buttonBalanced.Size = new Size(185, 120);
-            buttonBalanced.TabIndex = 1;
-            buttonBalanced.Text = Properties.Strings.Balanced;
-            buttonBalanced.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonBalanced.UseVisualStyleBackColor = false;
+            this.buttonBalanced.Activated = false;
+            this.buttonBalanced.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonBalanced.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonBalanced.BorderRadius = 5;
+            this.buttonBalanced.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonBalanced.FlatAppearance.BorderSize = 0;
+            this.buttonBalanced.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBalanced.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonBalanced.Image = global::GHelper.Properties.Resources.icons8_fiat_500_48;
+            this.buttonBalanced.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonBalanced.Location = new System.Drawing.Point(120, 2);
+            this.buttonBalanced.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBalanced.Name = "buttonBalanced";
+            this.buttonBalanced.Secondary = false;
+            this.buttonBalanced.Size = new System.Drawing.Size(114, 76);
+            this.buttonBalanced.TabIndex = 1;
+            this.buttonBalanced.Text = global::GHelper.Properties.Strings.Balanced;
+            this.buttonBalanced.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonBalanced.UseVisualStyleBackColor = false;
             // 
             // buttonTurbo
             // 
-            buttonTurbo.Activated = false;
-            buttonTurbo.BackColor = SystemColors.ControlLightLight;
-            buttonTurbo.BorderColor = Color.Transparent;
-            buttonTurbo.BorderRadius = 5;
-            buttonTurbo.Dock = DockStyle.Fill;
-            buttonTurbo.FlatAppearance.BorderSize = 0;
-            buttonTurbo.FlatStyle = FlatStyle.Flat;
-            buttonTurbo.ForeColor = SystemColors.ControlText;
-            buttonTurbo.Image = Properties.Resources.icons8_rocket_48;
-            buttonTurbo.ImageAlign = ContentAlignment.BottomCenter;
-            buttonTurbo.Location = new Point(390, 4);
-            buttonTurbo.Margin = new Padding(4);
-            buttonTurbo.Name = "buttonTurbo";
-            buttonTurbo.Secondary = false;
-            buttonTurbo.Size = new Size(185, 120);
-            buttonTurbo.TabIndex = 2;
-            buttonTurbo.Text = Properties.Strings.Turbo;
-            buttonTurbo.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonTurbo.UseVisualStyleBackColor = false;
+            this.buttonTurbo.Activated = false;
+            this.buttonTurbo.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonTurbo.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonTurbo.BorderRadius = 5;
+            this.buttonTurbo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonTurbo.FlatAppearance.BorderSize = 0;
+            this.buttonTurbo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTurbo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonTurbo.Image = global::GHelper.Properties.Resources.icons8_rocket_48;
+            this.buttonTurbo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonTurbo.Location = new System.Drawing.Point(238, 2);
+            this.buttonTurbo.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonTurbo.Name = "buttonTurbo";
+            this.buttonTurbo.Secondary = false;
+            this.buttonTurbo.Size = new System.Drawing.Size(114, 76);
+            this.buttonTurbo.TabIndex = 2;
+            this.buttonTurbo.Text = global::GHelper.Properties.Strings.Turbo;
+            this.buttonTurbo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonTurbo.UseVisualStyleBackColor = false;
             // 
             // buttonFans
             // 
-            buttonFans.Activated = false;
-            buttonFans.BackColor = SystemColors.ControlLight;
-            buttonFans.BorderColor = Color.Transparent;
-            buttonFans.BorderRadius = 5;
-            buttonFans.Dock = DockStyle.Fill;
-            buttonFans.FlatAppearance.BorderSize = 0;
-            buttonFans.FlatStyle = FlatStyle.Flat;
-            buttonFans.Image = Properties.Resources.icons8_fan_48;
-            buttonFans.ImageAlign = ContentAlignment.BottomCenter;
-            buttonFans.Location = new Point(583, 4);
-            buttonFans.Margin = new Padding(4);
-            buttonFans.Name = "buttonFans";
-            buttonFans.Secondary = true;
-            buttonFans.Size = new Size(185, 120);
-            buttonFans.TabIndex = 35;
-            buttonFans.Text = Properties.Strings.FansPower;
-            buttonFans.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonFans.UseVisualStyleBackColor = false;
+            this.buttonFans.Activated = false;
+            this.buttonFans.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonFans.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonFans.BorderRadius = 5;
+            this.buttonFans.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonFans.FlatAppearance.BorderSize = 0;
+            this.buttonFans.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFans.Image = global::GHelper.Properties.Resources.icons8_fan_48;
+            this.buttonFans.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonFans.Location = new System.Drawing.Point(356, 2);
+            this.buttonFans.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonFans.Name = "buttonFans";
+            this.buttonFans.Secondary = true;
+            this.buttonFans.Size = new System.Drawing.Size(114, 76);
+            this.buttonFans.TabIndex = 35;
+            this.buttonFans.Text = "Options";
+            this.buttonFans.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonFans.UseVisualStyleBackColor = false;
+            this.buttonFans.Click += new System.EventHandler(this.buttonFans_Click_1);
             // 
             // panelGPU
             // 
-            panelGPU.AutoSize = true;
-            panelGPU.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelGPU.Controls.Add(labelTipGPU);
-            panelGPU.Controls.Add(pictureGPU);
-            panelGPU.Controls.Add(labelGPU);
-            panelGPU.Controls.Add(labelGPUFan);
-            panelGPU.Controls.Add(tableGPU);
-            panelGPU.Dock = DockStyle.Top;
-            panelGPU.Location = new Point(10, 210);
-            panelGPU.Margin = new Padding(8);
-            panelGPU.Name = "panelGPU";
-            panelGPU.Padding = new Padding(0, 0, 0, 45);
-            panelGPU.Size = new Size(810, 237);
-            panelGPU.TabIndex = 37;
-            // 
-            // labelTipGPU
-            // 
-            labelTipGPU.ForeColor = SystemColors.GrayText;
-            labelTipGPU.Location = new Point(44, 191);
-            labelTipGPU.Margin = new Padding(4, 0, 4, 0);
-            labelTipGPU.Name = "labelTipGPU";
-            labelTipGPU.Size = new Size(760, 36);
-            labelTipGPU.TabIndex = 20;
-            labelTipGPU.Text = "";
-            labelTipGPU.Anchor = AnchorStyles.Right | AnchorStyles.Bottom;
-
+            this.panelGPU.AutoSize = true;
+            this.panelGPU.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelGPU.Controls.Add(this.pictureGPU);
+            this.panelGPU.Controls.Add(this.labelGPU);
+            this.panelGPU.Controls.Add(this.labelGPUFan);
+            this.panelGPU.Controls.Add(this.tableGPU);
+            this.panelGPU.Controls.Add(this.labelTipGPU);
+            this.panelGPU.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelGPU.Location = new System.Drawing.Point(6, 129);
+            this.panelGPU.Margin = new System.Windows.Forms.Padding(5);
+            this.panelGPU.Name = "panelGPU";
+            this.panelGPU.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelGPU.Size = new System.Drawing.Size(496, 146);
+            this.panelGPU.TabIndex = 37;
+            this.panelGPU.TabStop = true;
+            this.panelGPU.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGPU_Paint_2);
             // 
             // pictureGPU
             // 
-            pictureGPU.BackgroundImage = (Image)resources.GetObject("pictureGPU.BackgroundImage");
-            pictureGPU.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureGPU.Location = new Point(24, 21);
-            pictureGPU.Margin = new Padding(4);
-            pictureGPU.Name = "pictureGPU";
-            pictureGPU.Size = new Size(32, 32);
-            pictureGPU.TabIndex = 19;
-            pictureGPU.TabStop = false;
+            this.pictureGPU.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureGPU.BackgroundImage")));
+            this.pictureGPU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureGPU.Location = new System.Drawing.Point(15, 10);
+            this.pictureGPU.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureGPU.Name = "pictureGPU";
+            this.pictureGPU.Size = new System.Drawing.Size(20, 20);
+            this.pictureGPU.TabIndex = 19;
+            this.pictureGPU.TabStop = false;
+            this.pictureGPU.Click += new System.EventHandler(this.pictureGPU_Click);
             // 
             // labelGPU
             // 
-            labelGPU.AutoSize = true;
-            labelGPU.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelGPU.Location = new Point(60, 21);
-            labelGPU.Margin = new Padding(8, 0, 8, 0);
-            labelGPU.Name = "labelGPU";
-            labelGPU.Size = new Size(136, 32);
-            labelGPU.TabIndex = 18;
-            labelGPU.Text = Properties.Strings.GPUMode;
+            this.labelGPU.AutoSize = true;
+            this.labelGPU.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelGPU.Location = new System.Drawing.Point(38, 9);
+            this.labelGPU.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelGPU.Name = "labelGPU";
+            this.labelGPU.Size = new System.Drawing.Size(84, 20);
+            this.labelGPU.TabIndex = 18;
+            this.labelGPU.Text = "GPU Mode";
+            this.labelGPU.Click += new System.EventHandler(this.labelGPU_Click);
             // 
             // labelGPUFan
             // 
-            labelGPUFan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            labelGPUFan.Location = new Point(384, 21);
-            labelGPUFan.Margin = new Padding(8, 0, 8, 0);
-            labelGPUFan.Name = "labelGPUFan";
-            labelGPUFan.Size = new Size(400, 34);
-            labelGPUFan.TabIndex = 17;
-            labelGPUFan.Text = "         ";
-            labelGPUFan.TextAlign = ContentAlignment.TopRight;
+            this.labelGPUFan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelGPUFan.Location = new System.Drawing.Point(229, 6);
+            this.labelGPUFan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelGPUFan.Name = "labelGPUFan";
+            this.labelGPUFan.Size = new System.Drawing.Size(250, 21);
+            this.labelGPUFan.TabIndex = 17;
+            this.labelGPUFan.Text = "         ";
+            this.labelGPUFan.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.labelGPUFan.Click += new System.EventHandler(this.labelGPUFan_Click);
             // 
             // tableGPU
             // 
-            tableGPU.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableGPU.AutoSize = true;
-            tableGPU.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableGPU.ColumnCount = 4;
-            tableGPU.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableGPU.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableGPU.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableGPU.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableGPU.Controls.Add(buttonEco, 0, 0);
-            tableGPU.Controls.Add(buttonStandard, 1, 0);
-            tableGPU.Controls.Add(buttonXGM, 2, 0);
-            tableGPU.Controls.Add(buttonOptimized, 2, 0);
-            tableGPU.Controls.Add(buttonUltimate, 2, 0);
-            tableGPU.Location = new Point(16, 60);
-            tableGPU.Margin = new Padding(8, 4, 8, 4);
-            tableGPU.Name = "tableGPU";
-            tableGPU.RowCount = 1;
-            tableGPU.RowStyles.Add(new RowStyle(SizeType.Absolute, 128F));
-            tableGPU.Size = new Size(772, 128);
-            tableGPU.TabIndex = 16;
-            // 
-            // buttonEco
-            // 
-            buttonEco.Activated = false;
-            buttonEco.BackColor = SystemColors.ControlLightLight;
-            buttonEco.BorderColor = Color.Transparent;
-            buttonEco.BorderRadius = 5;
-            buttonEco.CausesValidation = false;
-            buttonEco.Dock = DockStyle.Top;
-            buttonEco.FlatAppearance.BorderSize = 0;
-            buttonEco.FlatStyle = FlatStyle.Flat;
-            buttonEco.ForeColor = SystemColors.ControlText;
-            buttonEco.Image = Properties.Resources.icons8_leaf_48;
-            buttonEco.ImageAlign = ContentAlignment.BottomCenter;
-            buttonEco.Location = new Point(4, 4);
-            buttonEco.Margin = new Padding(4);
-            buttonEco.Name = "buttonEco";
-            buttonEco.Secondary = false;
-            buttonEco.Size = new Size(185, 120);
-            buttonEco.TabIndex = 0;
-            buttonEco.Text = Properties.Strings.EcoMode;
-            buttonEco.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonEco.UseVisualStyleBackColor = false;
-            // 
-            // buttonStandard
-            // 
-            buttonStandard.Activated = false;
-            buttonStandard.BackColor = SystemColors.ControlLightLight;
-            buttonStandard.BorderColor = Color.Transparent;
-            buttonStandard.BorderRadius = 5;
-            buttonStandard.Dock = DockStyle.Top;
-            buttonStandard.FlatAppearance.BorderSize = 0;
-            buttonStandard.FlatStyle = FlatStyle.Flat;
-            buttonStandard.ForeColor = SystemColors.ControlText;
-            buttonStandard.Image = Properties.Resources.icons8_spa_flower_48;
-            buttonStandard.ImageAlign = ContentAlignment.BottomCenter;
-            buttonStandard.Location = new Point(197, 4);
-            buttonStandard.Margin = new Padding(4);
-            buttonStandard.Name = "buttonStandard";
-            buttonStandard.Secondary = false;
-            buttonStandard.Size = new Size(185, 120);
-            buttonStandard.TabIndex = 1;
-            buttonStandard.Text = Properties.Strings.StandardMode;
-            buttonStandard.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonStandard.UseVisualStyleBackColor = false;
-            // 
-            // buttonOptimized
-            // 
-            buttonOptimized.Activated = false;
-            buttonOptimized.BackColor = SystemColors.ControlLightLight;
-            buttonOptimized.BorderColor = Color.Transparent;
-            buttonOptimized.BorderRadius = 5;
-            buttonOptimized.Dock = DockStyle.Top;
-            buttonOptimized.FlatAppearance.BorderSize = 0;
-            buttonOptimized.FlatStyle = FlatStyle.Flat;
-            buttonOptimized.ForeColor = SystemColors.ControlText;
-            buttonOptimized.Image = Properties.Resources.icons8_project_management_48__1_;
-            buttonOptimized.ImageAlign = ContentAlignment.BottomCenter;
-            buttonOptimized.Location = new Point(583, 4);
-            buttonOptimized.Margin = new Padding(4);
-            buttonOptimized.Name = "buttonOptimized";
-            buttonOptimized.Secondary = false;
-            buttonOptimized.Size = new Size(185, 120);
-            buttonOptimized.TabIndex = 3;
-            buttonOptimized.Text = Properties.Strings.Optimized;
-            buttonOptimized.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonOptimized.UseVisualStyleBackColor = false;
-            // 
-            // buttonUltimate
-            // 
-            buttonUltimate.Activated = false;
-            buttonUltimate.BackColor = SystemColors.ControlLightLight;
-            buttonUltimate.BorderColor = Color.Transparent;
-            buttonUltimate.BorderRadius = 5;
-            buttonUltimate.Dock = DockStyle.Top;
-            buttonUltimate.FlatAppearance.BorderSize = 0;
-            buttonUltimate.FlatStyle = FlatStyle.Flat;
-            buttonUltimate.ForeColor = SystemColors.ControlText;
-            buttonUltimate.Image = Properties.Resources.icons8_game_controller_48;
-            buttonUltimate.ImageAlign = ContentAlignment.BottomCenter;
-            buttonUltimate.Location = new Point(390, 4);
-            buttonUltimate.Margin = new Padding(4);
-            buttonUltimate.Name = "buttonUltimate";
-            buttonUltimate.Secondary = false;
-            buttonUltimate.Size = new Size(185, 120);
-            buttonUltimate.TabIndex = 2;
-            buttonUltimate.Text = Properties.Strings.UltimateMode;
-            buttonUltimate.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonUltimate.UseVisualStyleBackColor = false;
+            this.tableGPU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableGPU.AutoSize = true;
+            this.tableGPU.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableGPU.ColumnCount = 5;
+            this.tableGPU.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableGPU.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableGPU.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableGPU.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableGPU.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableGPU.Controls.Add(this.buttonXGM, 2, 0);
+            this.tableGPU.Controls.Add(this.buttonEco, 0, 0);
+            this.tableGPU.Controls.Add(this.buttonStandard, 1, 0);
+            this.tableGPU.Controls.Add(this.buttonOptimized, 2, 0);
+            this.tableGPU.Controls.Add(this.buttonUltimate, 2, 0);
+            this.tableGPU.Location = new System.Drawing.Point(10, 35);
+            this.tableGPU.Margin = new System.Windows.Forms.Padding(5, 2, 5, 5);
+            this.tableGPU.Name = "tableGPU";
+            this.tableGPU.RowCount = 1;
+            this.tableGPU.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableGPU.Size = new System.Drawing.Size(475, 80);
+            this.tableGPU.TabIndex = 16;
+            this.tableGPU.Paint += new System.Windows.Forms.PaintEventHandler(this.tableGPU_Paint);
             // 
             // buttonXGM
             // 
-            buttonXGM.Activated = false;
-            buttonXGM.BackColor = SystemColors.ControlLightLight;
-            buttonXGM.BorderColor = Color.Transparent;
-            buttonXGM.BorderRadius = 5;
-            buttonXGM.Dock = DockStyle.Top;
-            buttonXGM.FlatAppearance.BorderSize = 0;
-            buttonXGM.FlatStyle = FlatStyle.Flat;
-            buttonXGM.ForeColor = SystemColors.ControlText;
-            buttonXGM.Image = Properties.Resources.icons8_video_48;
-            buttonXGM.ImageAlign = ContentAlignment.BottomCenter;
-            buttonXGM.Location = new Point(390, 4);
-            buttonXGM.Margin = new Padding(4);
-            buttonXGM.Name = "buttonXGM";
-            buttonXGM.Secondary = false;
-            buttonXGM.Size = new Size(185, 120);
-            buttonXGM.TabIndex = 2;
-            buttonXGM.Text = "XG Mobile";
-            buttonXGM.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonXGM.UseVisualStyleBackColor = false;
-            buttonXGM.Visible = false;
-
+            this.buttonXGM.Activated = false;
+            this.buttonXGM.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonXGM.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonXGM.BorderRadius = 5;
+            this.buttonXGM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonXGM.FlatAppearance.BorderSize = 0;
+            this.buttonXGM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXGM.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonXGM.Image = global::GHelper.Properties.Resources.icons8_video_48;
+            this.buttonXGM.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonXGM.Location = new System.Drawing.Point(382, 2);
+            this.buttonXGM.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonXGM.Name = "buttonXGM";
+            this.buttonXGM.Secondary = false;
+            this.buttonXGM.Size = new System.Drawing.Size(91, 76);
+            this.buttonXGM.TabIndex = 2;
+            this.buttonXGM.Text = "XG Mobile";
+            this.buttonXGM.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonXGM.UseVisualStyleBackColor = false;
+            this.buttonXGM.Visible = false;
+            // 
+            // buttonEco
+            // 
+            this.buttonEco.Activated = false;
+            this.buttonEco.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonEco.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonEco.BorderRadius = 5;
+            this.buttonEco.CausesValidation = false;
+            this.buttonEco.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEco.FlatAppearance.BorderSize = 0;
+            this.buttonEco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEco.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonEco.Image = global::GHelper.Properties.Resources.icons8_leaf_48;
+            this.buttonEco.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonEco.Location = new System.Drawing.Point(2, 2);
+            this.buttonEco.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonEco.Name = "buttonEco";
+            this.buttonEco.Secondary = false;
+            this.buttonEco.Size = new System.Drawing.Size(91, 75);
+            this.buttonEco.TabIndex = 0;
+            this.buttonEco.Text = global::GHelper.Properties.Strings.EcoMode;
+            this.buttonEco.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonEco.UseVisualStyleBackColor = false;
+            // 
+            // buttonStandard
+            // 
+            this.buttonStandard.Activated = false;
+            this.buttonStandard.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonStandard.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonStandard.BorderRadius = 5;
+            this.buttonStandard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonStandard.FlatAppearance.BorderSize = 0;
+            this.buttonStandard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStandard.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonStandard.Image = global::GHelper.Properties.Resources.icons8_spa_flower_48;
+            this.buttonStandard.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonStandard.Location = new System.Drawing.Point(97, 2);
+            this.buttonStandard.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonStandard.Name = "buttonStandard";
+            this.buttonStandard.Secondary = false;
+            this.buttonStandard.Size = new System.Drawing.Size(91, 75);
+            this.buttonStandard.TabIndex = 1;
+            this.buttonStandard.Text = global::GHelper.Properties.Strings.StandardMode;
+            this.buttonStandard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonStandard.UseVisualStyleBackColor = false;
+            // 
+            // buttonOptimized
+            // 
+            this.buttonOptimized.Activated = false;
+            this.buttonOptimized.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOptimized.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonOptimized.BorderRadius = 5;
+            this.buttonOptimized.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonOptimized.FlatAppearance.BorderSize = 0;
+            this.buttonOptimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOptimized.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonOptimized.Image = global::GHelper.Properties.Resources.icons8_project_management_48__1_;
+            this.buttonOptimized.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonOptimized.Location = new System.Drawing.Point(287, 2);
+            this.buttonOptimized.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOptimized.Name = "buttonOptimized";
+            this.buttonOptimized.Secondary = false;
+            this.buttonOptimized.Size = new System.Drawing.Size(91, 75);
+            this.buttonOptimized.TabIndex = 3;
+            this.buttonOptimized.Text = global::GHelper.Properties.Strings.Optimized;
+            this.buttonOptimized.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonOptimized.UseVisualStyleBackColor = false;
+            // 
+            // buttonUltimate
+            // 
+            this.buttonUltimate.Activated = false;
+            this.buttonUltimate.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonUltimate.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonUltimate.BorderRadius = 5;
+            this.buttonUltimate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonUltimate.FlatAppearance.BorderSize = 0;
+            this.buttonUltimate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUltimate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonUltimate.Image = global::GHelper.Properties.Resources.icons8_game_controller_48;
+            this.buttonUltimate.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUltimate.Location = new System.Drawing.Point(192, 2);
+            this.buttonUltimate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUltimate.Name = "buttonUltimate";
+            this.buttonUltimate.Secondary = false;
+            this.buttonUltimate.Size = new System.Drawing.Size(91, 75);
+            this.buttonUltimate.TabIndex = 2;
+            this.buttonUltimate.Text = global::GHelper.Properties.Strings.UltimateMode;
+            this.buttonUltimate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonUltimate.UseVisualStyleBackColor = false;
+            // 
+            // labelTipGPU
+            // 
+            this.labelTipGPU.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.labelTipGPU.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelTipGPU.Location = new System.Drawing.Point(15, 118);
+            this.labelTipGPU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipGPU.Name = "labelTipGPU";
+            this.labelTipGPU.Size = new System.Drawing.Size(465, 22);
+            this.labelTipGPU.TabIndex = 21;
+            this.labelTipGPU.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.labelTipGPU.Click += new System.EventHandler(this.labelTipGPU_Click_1);
             // 
             // panelScreen
             // 
-            panelScreen.AutoSize = true;
-            panelScreen.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelScreen.Controls.Add(labelMidFan);
-            panelScreen.Controls.Add(labelTipScreen);
-            panelScreen.Controls.Add(tableScreen);
-            panelScreen.Controls.Add(pictureScreen);
-            panelScreen.Controls.Add(labelSreen);
-            panelScreen.Dock = DockStyle.Top;
-            panelScreen.Location = new Point(10, 447);
-            panelScreen.Margin = new Padding(8);
-            panelScreen.Name = "panelScreen";
-            panelScreen.Padding = new Padding(0, 0, 0, 10);
-            panelScreen.Size = new Size(810, 181);
-            panelScreen.TabIndex = 38;
+            this.panelScreen.AutoSize = true;
+            this.panelScreen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelScreen.Controls.Add(this.labelMidFan);
+            this.panelScreen.Controls.Add(this.labelTipScreen);
+            this.panelScreen.Controls.Add(this.tableScreen);
+            this.panelScreen.Controls.Add(this.pictureScreen);
+            this.panelScreen.Controls.Add(this.labelSreen);
+            this.panelScreen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelScreen.Location = new System.Drawing.Point(6, 275);
+            this.panelScreen.Margin = new System.Windows.Forms.Padding(5);
+            this.panelScreen.Name = "panelScreen";
+            this.panelScreen.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelScreen.Size = new System.Drawing.Size(496, 116);
+            this.panelScreen.TabIndex = 38;
             // 
             // labelMidFan
             // 
-            labelMidFan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            labelMidFan.Location = new Point(488, 13);
-            labelMidFan.Margin = new Padding(8, 0, 8, 0);
-            labelMidFan.Name = "labelMidFan";
-            labelMidFan.Size = new Size(296, 34);
-            labelMidFan.TabIndex = 25;
-            labelMidFan.Text = "         ";
-            labelMidFan.TextAlign = ContentAlignment.TopRight;
+            this.labelMidFan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMidFan.Location = new System.Drawing.Point(292, 6);
+            this.labelMidFan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelMidFan.Name = "labelMidFan";
+            this.labelMidFan.Size = new System.Drawing.Size(185, 21);
+            this.labelMidFan.TabIndex = 25;
+            this.labelMidFan.Text = "         ";
+            this.labelMidFan.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // labelTipScreen
             // 
-            labelTipScreen.ForeColor = SystemColors.GrayText;
-            labelTipScreen.Location = new Point(20, 135);
-            labelTipScreen.Margin = new Padding(4, 0, 4, 0);
-            labelTipScreen.Name = "labelTipScreen";
-            labelTipScreen.Size = new Size(760, 36);
-            labelTipScreen.TabIndex = 24;
+            this.labelTipScreen.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.labelTipScreen.Location = new System.Drawing.Point(15, 88);
+            this.labelTipScreen.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTipScreen.Name = "labelTipScreen";
+            this.labelTipScreen.Size = new System.Drawing.Size(465, 22);
+            this.labelTipScreen.TabIndex = 24;
             // 
             // tableScreen
             // 
-            tableScreen.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableScreen.AutoSize = true;
-            tableScreen.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableScreen.ColumnCount = 4;
-            tableScreen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableScreen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableScreen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableScreen.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableScreen.Controls.Add(buttonScreenAuto, 0, 0);
-            tableScreen.Controls.Add(button60Hz, 1, 0);
-            tableScreen.Controls.Add(button120Hz, 2, 0);
-            tableScreen.Controls.Add(buttonMiniled, 3, 0);
-            tableScreen.Location = new Point(16, 51);
-            tableScreen.Margin = new Padding(8, 4, 8, 4);
-            tableScreen.Name = "tableScreen";
-            tableScreen.RowCount = 1;
-            tableScreen.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
-            tableScreen.Size = new Size(772, 80);
-            tableScreen.TabIndex = 23;
+            this.tableScreen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableScreen.AutoSize = true;
+            this.tableScreen.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableScreen.ColumnCount = 5;
+            this.tableScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableScreen.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableScreen.Controls.Add(this.buttonScreenAuto, 0, 0);
+            this.tableScreen.Controls.Add(this.button60Hz, 1, 0);
+            this.tableScreen.Controls.Add(this.button120Hz, 2, 0);
+            this.tableScreen.Controls.Add(this.buttonOD, 3, 0);
+            this.tableScreen.Controls.Add(this.buttonMiniled, 4, 0);
+            this.tableScreen.Location = new System.Drawing.Point(10, 35);
+            this.tableScreen.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.tableScreen.Name = "tableScreen";
+            this.tableScreen.RowCount = 1;
+            this.tableScreen.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableScreen.Size = new System.Drawing.Size(465, 50);
+            this.tableScreen.TabIndex = 23;
             // 
             // buttonScreenAuto
             // 
-            buttonScreenAuto.Activated = false;
-            buttonScreenAuto.BackColor = SystemColors.ControlLightLight;
-            buttonScreenAuto.BorderColor = Color.Transparent;
-            buttonScreenAuto.BorderRadius = 5;
-            buttonScreenAuto.Dock = DockStyle.Fill;
-            buttonScreenAuto.FlatAppearance.BorderSize = 0;
-            buttonScreenAuto.FlatStyle = FlatStyle.Flat;
-            buttonScreenAuto.ForeColor = SystemColors.ControlText;
-            buttonScreenAuto.Location = new Point(4, 4);
-            buttonScreenAuto.Margin = new Padding(4);
-            buttonScreenAuto.Name = "buttonScreenAuto";
-            buttonScreenAuto.Secondary = false;
-            buttonScreenAuto.Size = new Size(185, 72);
-            buttonScreenAuto.TabIndex = 0;
-            buttonScreenAuto.Text = Properties.Strings.AutoMode;
-            buttonScreenAuto.UseVisualStyleBackColor = false;
+            this.buttonScreenAuto.Activated = false;
+            this.buttonScreenAuto.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonScreenAuto.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonScreenAuto.BorderRadius = 5;
+            this.buttonScreenAuto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonScreenAuto.FlatAppearance.BorderSize = 0;
+            this.buttonScreenAuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonScreenAuto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonScreenAuto.Location = new System.Drawing.Point(2, 2);
+            this.buttonScreenAuto.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonScreenAuto.Name = "buttonScreenAuto";
+            this.buttonScreenAuto.Secondary = false;
+            this.buttonScreenAuto.Size = new System.Drawing.Size(89, 46);
+            this.buttonScreenAuto.TabIndex = 0;
+            this.buttonScreenAuto.Text = global::GHelper.Properties.Strings.AutoMode;
+            this.buttonScreenAuto.UseVisualStyleBackColor = false;
             // 
             // button60Hz
             // 
-            button60Hz.Activated = false;
-            button60Hz.BackColor = SystemColors.ControlLightLight;
-            button60Hz.BorderColor = Color.Transparent;
-            button60Hz.BorderRadius = 5;
-            button60Hz.CausesValidation = false;
-            button60Hz.Dock = DockStyle.Fill;
-            button60Hz.FlatAppearance.BorderSize = 0;
-            button60Hz.FlatStyle = FlatStyle.Flat;
-            button60Hz.ForeColor = SystemColors.ControlText;
-            button60Hz.Location = new Point(197, 4);
-            button60Hz.Margin = new Padding(4);
-            button60Hz.Name = "button60Hz";
-            button60Hz.Secondary = false;
-            button60Hz.Size = new Size(185, 72);
-            button60Hz.TabIndex = 1;
-            button60Hz.Text = "60Hz";
-            button60Hz.UseVisualStyleBackColor = false;
+            this.button60Hz.Activated = false;
+            this.button60Hz.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button60Hz.BorderColor = System.Drawing.Color.Transparent;
+            this.button60Hz.BorderRadius = 5;
+            this.button60Hz.CausesValidation = false;
+            this.button60Hz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button60Hz.FlatAppearance.BorderSize = 0;
+            this.button60Hz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button60Hz.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button60Hz.Location = new System.Drawing.Point(95, 2);
+            this.button60Hz.Margin = new System.Windows.Forms.Padding(2);
+            this.button60Hz.Name = "button60Hz";
+            this.button60Hz.Secondary = false;
+            this.button60Hz.Size = new System.Drawing.Size(89, 46);
+            this.button60Hz.TabIndex = 1;
+            this.button60Hz.Text = "60Hz";
+            this.button60Hz.UseVisualStyleBackColor = false;
             // 
             // button120Hz
             // 
-            button120Hz.Activated = false;
-            button120Hz.BackColor = SystemColors.ControlLightLight;
-            button120Hz.BorderColor = Color.Transparent;
-            button120Hz.BorderRadius = 5;
-            button120Hz.Dock = DockStyle.Fill;
-            button120Hz.FlatAppearance.BorderSize = 0;
-            button120Hz.FlatStyle = FlatStyle.Flat;
-            button120Hz.ForeColor = SystemColors.ControlText;
-            button120Hz.Location = new Point(390, 4);
-            button120Hz.Margin = new Padding(4);
-            button120Hz.Name = "button120Hz";
-            button120Hz.Secondary = false;
-            button120Hz.Size = new Size(185, 72);
-            button120Hz.TabIndex = 2;
-            button120Hz.Text = "120Hz + OD";
-            button120Hz.UseVisualStyleBackColor = false;
+            this.button120Hz.Activated = false;
+            this.button120Hz.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button120Hz.BorderColor = System.Drawing.Color.Transparent;
+            this.button120Hz.BorderRadius = 5;
+            this.button120Hz.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button120Hz.FlatAppearance.BorderSize = 0;
+            this.button120Hz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button120Hz.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button120Hz.Location = new System.Drawing.Point(188, 2);
+            this.button120Hz.Margin = new System.Windows.Forms.Padding(2);
+            this.button120Hz.Name = "button120Hz";
+            this.button120Hz.Secondary = false;
+            this.button120Hz.Size = new System.Drawing.Size(89, 46);
+            this.button120Hz.TabIndex = 2;
+            this.button120Hz.Text = "120Hz";
+            this.button120Hz.UseVisualStyleBackColor = false;
+            // 
+            // buttonOD
+            // 
+            this.buttonOD.Activated = false;
+            this.buttonOD.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonOD.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonOD.BorderRadius = 5;
+            this.buttonOD.CausesValidation = false;
+            this.buttonOD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonOD.FlatAppearance.BorderSize = 0;
+            this.buttonOD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOD.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonOD.Location = new System.Drawing.Point(281, 2);
+            this.buttonOD.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonOD.Name = "buttonOD";
+            this.buttonOD.Secondary = false;
+            this.buttonOD.Size = new System.Drawing.Size(89, 46);
+            this.buttonOD.TabIndex = 3;
+            this.buttonOD.Text = "Override";
+            this.buttonOD.UseVisualStyleBackColor = false;
             // 
             // buttonMiniled
             // 
-            buttonMiniled.Activated = false;
-            buttonMiniled.BackColor = SystemColors.ControlLightLight;
-            buttonMiniled.BorderColor = Color.Transparent;
-            buttonMiniled.BorderRadius = 5;
-            buttonMiniled.CausesValidation = false;
-            buttonMiniled.Dock = DockStyle.Fill;
-            buttonMiniled.FlatAppearance.BorderSize = 0;
-            buttonMiniled.FlatStyle = FlatStyle.Flat;
-            buttonMiniled.ForeColor = SystemColors.ControlText;
-            buttonMiniled.Location = new Point(583, 4);
-            buttonMiniled.Margin = new Padding(4);
-            buttonMiniled.Name = "buttonMiniled";
-            buttonMiniled.Secondary = false;
-            buttonMiniled.Size = new Size(185, 72);
-            buttonMiniled.TabIndex = 3;
-            buttonMiniled.Text = Properties.Strings.Multizone;
-            buttonMiniled.UseVisualStyleBackColor = false;
+            this.buttonMiniled.Activated = false;
+            this.buttonMiniled.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.buttonMiniled.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonMiniled.BorderRadius = 5;
+            this.buttonMiniled.CausesValidation = false;
+            this.buttonMiniled.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonMiniled.FlatAppearance.BorderSize = 0;
+            this.buttonMiniled.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMiniled.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonMiniled.Location = new System.Drawing.Point(374, 2);
+            this.buttonMiniled.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonMiniled.Name = "buttonMiniled";
+            this.buttonMiniled.Secondary = false;
+            this.buttonMiniled.Size = new System.Drawing.Size(89, 46);
+            this.buttonMiniled.TabIndex = 4;
+            this.buttonMiniled.Text = global::GHelper.Properties.Strings.Multizone;
+            this.buttonMiniled.UseVisualStyleBackColor = false;
             // 
             // pictureScreen
             // 
-            pictureScreen.BackgroundImage = (Image)resources.GetObject("pictureScreen.BackgroundImage");
-            pictureScreen.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureScreen.Location = new Point(24, 11);
-            pictureScreen.Margin = new Padding(4);
-            pictureScreen.Name = "pictureScreen";
-            pictureScreen.Size = new Size(32, 32);
-            pictureScreen.TabIndex = 22;
-            pictureScreen.TabStop = false;
+            this.pictureScreen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureScreen.BackgroundImage")));
+            this.pictureScreen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureScreen.Location = new System.Drawing.Point(15, 10);
+            this.pictureScreen.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureScreen.Name = "pictureScreen";
+            this.pictureScreen.Size = new System.Drawing.Size(20, 20);
+            this.pictureScreen.TabIndex = 22;
+            this.pictureScreen.TabStop = false;
             // 
             // labelSreen
             // 
-            labelSreen.AutoSize = true;
-            labelSreen.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelSreen.Location = new Point(60, 9);
-            labelSreen.Margin = new Padding(8, 0, 8, 0);
-            labelSreen.Name = "labelSreen";
-            labelSreen.Size = new Size(176, 32);
-            labelSreen.TabIndex = 21;
-            labelSreen.Text = Properties.Strings.LaptopScreen;
+            this.labelSreen.AutoSize = true;
+            this.labelSreen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelSreen.Location = new System.Drawing.Point(38, 9);
+            this.labelSreen.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelSreen.Name = "labelSreen";
+            this.labelSreen.Size = new System.Drawing.Size(108, 20);
+            this.labelSreen.TabIndex = 21;
+            this.labelSreen.Text = "Laptop Screen";
             // 
             // panelKeyboard
             // 
-            panelKeyboard.AutoSize = true;
-            panelKeyboard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            panelKeyboard.Controls.Add(tableLayoutKeyboard);
-            panelKeyboard.Controls.Add(pictureKeyboard);
-            panelKeyboard.Controls.Add(labelKeyboard);
-            panelKeyboard.Dock = DockStyle.Top;
-            panelKeyboard.Location = new Point(10, 628);
-            panelKeyboard.Margin = new Padding(8);
-            panelKeyboard.Name = "panelKeyboard";
-            panelKeyboard.Padding = new Padding(0, 0, 0, 12);
-            panelKeyboard.Size = new Size(810, 130);
-            panelKeyboard.TabIndex = 39;
+            this.panelKeyboard.AutoSize = true;
+            this.panelKeyboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelKeyboard.Controls.Add(this.tableLayoutKeyboard);
+            this.panelKeyboard.Controls.Add(this.pictureKeyboard);
+            this.panelKeyboard.Controls.Add(this.labelKeyboard);
+            this.panelKeyboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKeyboard.Location = new System.Drawing.Point(6, 391);
+            this.panelKeyboard.Margin = new System.Windows.Forms.Padding(5);
+            this.panelKeyboard.Name = "panelKeyboard";
+            this.panelKeyboard.Padding = new System.Windows.Forms.Padding(0, 0, 0, 6);
+            this.panelKeyboard.Size = new System.Drawing.Size(496, 85);
+            this.panelKeyboard.TabIndex = 39;
             // 
             // tableLayoutKeyboard
             // 
-            tableLayoutKeyboard.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutKeyboard.AutoSize = true;
-            tableLayoutKeyboard.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            tableLayoutKeyboard.ColumnCount = 3;
-            tableLayoutKeyboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutKeyboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutKeyboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutKeyboard.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
-            tableLayoutKeyboard.Controls.Add(comboKeyboard, 0, 0);
-            tableLayoutKeyboard.Controls.Add(panelColor, 1, 0);
-            tableLayoutKeyboard.Controls.Add(buttonKeyboard, 2, 0);
-            tableLayoutKeyboard.Location = new Point(16, 50);
-            tableLayoutKeyboard.Margin = new Padding(8);
-            tableLayoutKeyboard.Name = "tableLayoutKeyboard";
-            tableLayoutKeyboard.RowCount = 1;
-            tableLayoutKeyboard.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutKeyboard.Size = new Size(771, 60);
-            tableLayoutKeyboard.TabIndex = 39;
+            this.tableLayoutKeyboard.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutKeyboard.AutoSize = true;
+            this.tableLayoutKeyboard.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutKeyboard.ColumnCount = 3;
+            this.tableLayoutKeyboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutKeyboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutKeyboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutKeyboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutKeyboard.Controls.Add(this.comboKeyboard, 0, 0);
+            this.tableLayoutKeyboard.Controls.Add(this.panelColor, 1, 0);
+            this.tableLayoutKeyboard.Controls.Add(this.buttonKeyboard, 2, 0);
+            this.tableLayoutKeyboard.Location = new System.Drawing.Point(10, 35);
+            this.tableLayoutKeyboard.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutKeyboard.Name = "tableLayoutKeyboard";
+            this.tableLayoutKeyboard.RowCount = 1;
+            this.tableLayoutKeyboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutKeyboard.Size = new System.Drawing.Size(465, 39);
+            this.tableLayoutKeyboard.TabIndex = 39;
             // 
             // comboKeyboard
             // 
-            comboKeyboard.BorderColor = Color.White;
-            comboKeyboard.ButtonColor = Color.FromArgb(255, 255, 255);
-            comboKeyboard.Dock = DockStyle.Top;
-            comboKeyboard.FlatStyle = FlatStyle.Flat;
-            comboKeyboard.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            comboKeyboard.FormattingEnabled = true;
-            comboKeyboard.ItemHeight = 32;
-            comboKeyboard.Items.AddRange(new object[] { "Static", "Breathe", "Rainbow", "Strobe" });
-            comboKeyboard.Location = new Point(4, 10);
-            comboKeyboard.Margin = new Padding(4, 10, 4, 8);
-            comboKeyboard.Name = "comboKeyboard";
-            comboKeyboard.Size = new Size(249, 44);
-            comboKeyboard.TabIndex = 35;
-            comboKeyboard.TabStop = false;
+            this.comboKeyboard.BorderColor = System.Drawing.Color.White;
+            this.comboKeyboard.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.comboKeyboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.comboKeyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboKeyboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboKeyboard.FormattingEnabled = true;
+            this.comboKeyboard.ItemHeight = 20;
+            this.comboKeyboard.Items.AddRange(new object[] {
+            "Static",
+            "Breathe",
+            "Rainbow",
+            "Strobe"});
+            this.comboKeyboard.Location = new System.Drawing.Point(2, 6);
+            this.comboKeyboard.Margin = new System.Windows.Forms.Padding(2, 6, 2, 5);
+            this.comboKeyboard.Name = "comboKeyboard";
+            this.comboKeyboard.Size = new System.Drawing.Size(151, 28);
+            this.comboKeyboard.TabIndex = 35;
+            this.comboKeyboard.TabStop = false;
             // 
             // panelColor
             // 
-            panelColor.AutoSize = true;
-            panelColor.Controls.Add(pictureColor2);
-            panelColor.Controls.Add(pictureColor);
-            panelColor.Controls.Add(buttonKeyboardColor);
-            panelColor.Dock = DockStyle.Fill;
-            panelColor.Location = new Point(261, 8);
-            panelColor.Margin = new Padding(4, 7, 4, 7);
-            panelColor.Name = "panelColor";
-            panelColor.Size = new Size(249, 45);
-            panelColor.TabIndex = 36;
+            this.panelColor.AutoSize = true;
+            this.panelColor.Controls.Add(this.pictureColor2);
+            this.panelColor.Controls.Add(this.pictureColor);
+            this.panelColor.Controls.Add(this.buttonKeyboardColor);
+            this.panelColor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelColor.Location = new System.Drawing.Point(157, 4);
+            this.panelColor.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.panelColor.Name = "panelColor";
+            this.panelColor.Size = new System.Drawing.Size(151, 31);
+            this.panelColor.TabIndex = 36;
             // 
             // pictureColor2
             // 
-            pictureColor2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureColor2.Location = new Point(188, 13);
-            pictureColor2.Margin = new Padding(8);
-            pictureColor2.Name = "pictureColor2";
-            pictureColor2.Size = new Size(20, 20);
-            pictureColor2.TabIndex = 41;
-            pictureColor2.TabStop = false;
+            this.pictureColor2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureColor2.Location = new System.Drawing.Point(113, 8);
+            this.pictureColor2.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureColor2.Name = "pictureColor2";
+            this.pictureColor2.Size = new System.Drawing.Size(12, 12);
+            this.pictureColor2.TabIndex = 41;
+            this.pictureColor2.TabStop = false;
             // 
             // pictureColor
             // 
-            pictureColor.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureColor.Location = new Point(215, 13);
-            pictureColor.Margin = new Padding(8);
-            pictureColor.Name = "pictureColor";
-            pictureColor.Size = new Size(20, 20);
-            pictureColor.TabIndex = 40;
-            pictureColor.TabStop = false;
+            this.pictureColor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureColor.Location = new System.Drawing.Point(129, 8);
+            this.pictureColor.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureColor.Name = "pictureColor";
+            this.pictureColor.Size = new System.Drawing.Size(12, 12);
+            this.pictureColor.TabIndex = 40;
+            this.pictureColor.TabStop = false;
             // 
             // buttonKeyboardColor
             // 
-            buttonKeyboardColor.Activated = false;
-            buttonKeyboardColor.BackColor = SystemColors.ButtonHighlight;
-            buttonKeyboardColor.BorderColor = Color.Transparent;
-            buttonKeyboardColor.BorderRadius = 2;
-            buttonKeyboardColor.Dock = DockStyle.Top;
-            buttonKeyboardColor.FlatStyle = FlatStyle.Flat;
-            buttonKeyboardColor.ForeColor = SystemColors.ControlText;
-            buttonKeyboardColor.Location = new Point(0, 0);
-            buttonKeyboardColor.Margin = new Padding(4, 7, 4, 7);
-            buttonKeyboardColor.Name = "buttonKeyboardColor";
-            buttonKeyboardColor.Secondary = false;
-            buttonKeyboardColor.Size = new Size(249, 45);
-            buttonKeyboardColor.TabIndex = 39;
-            buttonKeyboardColor.Text = Properties.Strings.Color;
-            buttonKeyboardColor.UseVisualStyleBackColor = false;
+            this.buttonKeyboardColor.Activated = false;
+            this.buttonKeyboardColor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonKeyboardColor.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonKeyboardColor.BorderRadius = 2;
+            this.buttonKeyboardColor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonKeyboardColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKeyboardColor.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.buttonKeyboardColor.Location = new System.Drawing.Point(0, 0);
+            this.buttonKeyboardColor.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonKeyboardColor.Name = "buttonKeyboardColor";
+            this.buttonKeyboardColor.Secondary = false;
+            this.buttonKeyboardColor.Size = new System.Drawing.Size(151, 28);
+            this.buttonKeyboardColor.TabIndex = 39;
+            this.buttonKeyboardColor.Text = global::GHelper.Properties.Strings.Color;
+            this.buttonKeyboardColor.UseVisualStyleBackColor = false;
             // 
             // buttonKeyboard
             // 
-            buttonKeyboard.Activated = false;
-            buttonKeyboard.BackColor = SystemColors.ControlLight;
-            buttonKeyboard.BorderColor = Color.Transparent;
-            buttonKeyboard.BorderRadius = 2;
-            buttonKeyboard.Dock = DockStyle.Top;
-            buttonKeyboard.FlatAppearance.BorderSize = 0;
-            buttonKeyboard.FlatStyle = FlatStyle.Flat;
-            buttonKeyboard.Location = new Point(518, 8);
-            buttonKeyboard.Margin = new Padding(4, 7, 4, 7);
-            buttonKeyboard.Name = "buttonKeyboard";
-            buttonKeyboard.Secondary = true;
-            buttonKeyboard.Size = new Size(249, 45);
-            buttonKeyboard.TabIndex = 37;
-            buttonKeyboard.Text = Properties.Strings.Extra;
-            buttonKeyboard.UseVisualStyleBackColor = false;
+            this.buttonKeyboard.Activated = false;
+            this.buttonKeyboard.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.buttonKeyboard.BorderColor = System.Drawing.Color.Transparent;
+            this.buttonKeyboard.BorderRadius = 2;
+            this.buttonKeyboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonKeyboard.FlatAppearance.BorderSize = 0;
+            this.buttonKeyboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonKeyboard.Location = new System.Drawing.Point(312, 4);
+            this.buttonKeyboard.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.buttonKeyboard.Name = "buttonKeyboard";
+            this.buttonKeyboard.Secondary = true;
+            this.buttonKeyboard.Size = new System.Drawing.Size(151, 28);
+            this.buttonKeyboard.TabIndex = 37;
+            this.buttonKeyboard.Text = global::GHelper.Properties.Strings.Extra;
+            this.buttonKeyboard.UseVisualStyleBackColor = false;
             // 
             // pictureKeyboard
             // 
-            pictureKeyboard.BackgroundImage = Properties.Resources.icons8_keyboard_48;
-            pictureKeyboard.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureKeyboard.Location = new Point(24, 14);
-            pictureKeyboard.Margin = new Padding(4);
-            pictureKeyboard.Name = "pictureKeyboard";
-            pictureKeyboard.Size = new Size(32, 32);
-            pictureKeyboard.TabIndex = 33;
-            pictureKeyboard.TabStop = false;
+            this.pictureKeyboard.BackgroundImage = global::GHelper.Properties.Resources.icons8_keyboard_48;
+            this.pictureKeyboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureKeyboard.Location = new System.Drawing.Point(15, 10);
+            this.pictureKeyboard.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureKeyboard.Name = "pictureKeyboard";
+            this.pictureKeyboard.Size = new System.Drawing.Size(20, 20);
+            this.pictureKeyboard.TabIndex = 33;
+            this.pictureKeyboard.TabStop = false;
             // 
             // labelKeyboard
             // 
-            labelKeyboard.AutoSize = true;
-            labelKeyboard.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            labelKeyboard.Location = new Point(60, 14);
-            labelKeyboard.Margin = new Padding(8, 0, 8, 0);
-            labelKeyboard.Name = "labelKeyboard";
-            labelKeyboard.Size = new Size(210, 32);
-            labelKeyboard.TabIndex = 32;
-            labelKeyboard.Text = Properties.Strings.LaptopKeyboard;
+            this.labelKeyboard.AutoSize = true;
+            this.labelKeyboard.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.labelKeyboard.Location = new System.Drawing.Point(38, 9);
+            this.labelKeyboard.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.labelKeyboard.Name = "labelKeyboard";
+            this.labelKeyboard.Size = new System.Drawing.Size(129, 20);
+            this.labelKeyboard.TabIndex = 32;
+            this.labelKeyboard.Text = "Laptop Keyboard";
             // 
             // SettingsForm
             // 
-            AutoScaleDimensions = new SizeF(192F, 192F);
-            AutoScaleMode = AutoScaleMode.Dpi;
-            AutoSize = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(830, 1173);
-            Controls.Add(panelFooter);
-            Controls.Add(panelBattery);
-            Controls.Add(panelMatrix);
-            Controls.Add(panelKeyboard);
-            Controls.Add(panelScreen);
-            Controls.Add(panelGPU);
-            Controls.Add(panelPerformance);
-            Margin = new Padding(8, 4, 8, 4);
-            MaximizeBox = false;
-            MdiChildrenMinimizedAnchorBottom = false;
-            MinimizeBox = false;
-            MinimumSize = new Size(830, 71);
-            Name = "SettingsForm";
-            Padding = new Padding(10);
-            ShowIcon = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "G-Helper";
-            Load += Settings_Load;
-            panelMatrix.ResumeLayout(false);
-            panelMatrix.PerformLayout();
-            tableLayoutMatrix.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureMatrix).EndInit();
-            panelBattery.ResumeLayout(false);
-            panelBattery.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBattery).EndInit();
-            panelFooter.ResumeLayout(false);
-            panelFooter.PerformLayout();
-            panelPerformance.ResumeLayout(false);
-            panelPerformance.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)picturePerf).EndInit();
-            tablePerf.ResumeLayout(false);
-            panelGPU.ResumeLayout(false);
-            panelGPU.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureGPU).EndInit();
-            tableGPU.ResumeLayout(false);
-            panelScreen.ResumeLayout(false);
-            panelScreen.PerformLayout();
-            tableScreen.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureScreen).EndInit();
-            panelKeyboard.ResumeLayout(false);
-            panelKeyboard.PerformLayout();
-            tableLayoutKeyboard.ResumeLayout(false);
-            tableLayoutKeyboard.PerformLayout();
-            panelColor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureColor2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureColor).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureKeyboard).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(508, 731);
+            this.Controls.Add(this.panelFooter);
+            this.Controls.Add(this.panelBattery);
+            this.Controls.Add(this.panelMatrix);
+            this.Controls.Add(this.panelKeyboard);
+            this.Controls.Add(this.panelScreen);
+            this.Controls.Add(this.panelGPU);
+            this.Controls.Add(this.panelPerformance);
+            this.Margin = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.MaximizeBox = false;
+            this.MdiChildrenMinimizedAnchorBottom = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(526, 62);
+            this.Name = "SettingsForm";
+            this.Padding = new System.Windows.Forms.Padding(6);
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "G-Helper";
+            this.panelMatrix.ResumeLayout(false);
+            this.panelMatrix.PerformLayout();
+            this.tableLayoutMatrix.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMatrix)).EndInit();
+            this.panelBattery.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBattery)).EndInit();
+            this.panelFooter.ResumeLayout(false);
+            this.panelFooter.PerformLayout();
+            this.panelPerformance.ResumeLayout(false);
+            this.panelPerformance.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePerf)).EndInit();
+            this.tablePerf.ResumeLayout(false);
+            this.panelGPU.ResumeLayout(false);
+            this.panelGPU.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureGPU)).EndInit();
+            this.tableGPU.ResumeLayout(false);
+            this.panelScreen.ResumeLayout(false);
+            this.panelScreen.PerformLayout();
+            this.tableScreen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureScreen)).EndInit();
+            this.panelKeyboard.ResumeLayout(false);
+            this.panelKeyboard.PerformLayout();
+            this.tableLayoutKeyboard.ResumeLayout(false);
+            this.tableLayoutKeyboard.PerformLayout();
+            this.panelColor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureKeyboard)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -1141,5 +1189,7 @@ namespace GHelper
         private Label labelMidFan;
         private Label labelModel;
         private WinFormsSliderBar.Slider sliderBattery;
+        private RButton rButton1;
+        private RButton buttonOD;
     }
 }
